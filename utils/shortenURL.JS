@@ -1,15 +1,14 @@
 const letters =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-function randomIndex(letters) {
-  return Math.floor(Math.random() * letters.length);
+function sample(array) {
+  const index = Math.floor(Math.random() * array.length);
+  return array[index];
 }
-
 function shortenURL(len) {
   let shortText = [];
   for (let i = 0; i < len; i++) {
-    let Index = randomIndex(letters);
-    shortText += letters[Index];
+    shortText += sample(letters.split(""));
   }
   return shortText;
 }

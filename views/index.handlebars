@@ -1,6 +1,13 @@
-<form action='/' method="POST">
+<form action="/" method="POST">
   <div>
-    <input class="mt-1" placeholder="Input URL here" name="url" required>
+    {{! 用required確定使用者有輸入且必須是網址 }}
+    <input
+      class="mt-1"
+      type="url"
+      placeholder="Input URL here"
+      name="url"
+      required
+    />
   </div>
   <button class="mt-2 btn btn-secondary">Shorter</button>
 </form>
